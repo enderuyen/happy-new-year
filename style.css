@@ -1,0 +1,46 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: sans-serif;
+   background: linear-gradient(45deg, #edf, #eef, #eff);
+}
+
+article {
+   padding: 50px;
+   border: 1px solid #000;
+   display: flex;
+   justify-content: center;
+}
+
+footer {
+   background: #333;
+   color: #fff;
+   height: 100px;
+   display: flex;
+   justify-content: center;
+}
+
+.footer__content {
+   align-self: center;
+}
+
+.an-khang {
+   display: flex;
+}
+
+.an-khang__p {
+   margin: 25px;
+   font-family: "Pacifico", cursive;
+   line-height: 70px;
+   color: #f00;
+   margin-top: -20px;
+}
+
+.an-khang img{
+   width: 400px;
+   height: 250px;
+}
