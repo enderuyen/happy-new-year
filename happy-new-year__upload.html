@@ -5,14 +5,256 @@
    <title>Happy New Year</title>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <link rel="stylesheet" href="style.css" type="text/css" />
    <link rel="preconnect" href="https://fonts.gstatic.com" />
    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+
+<style type="text/css" media="all">
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --with-hr: 70%;
+}
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-family: sans-serif;
+   background: linear-gradient(45deg, #edf, #eef, #eff);
+   display: flex;
+   flex-direction: column;
+   font-family: Quicksand;
+   font-size: 1.6rem;
+   text-align: center;
+   font-weight: 400;
+   padding: 25px 25px 0 25px;
+}
+
+/* AUXILIARY INGREDIENTS */
+.hr__after {
+   width: 70%;
+   margin: 0 auto;
+   height: 3px;
+   background: linear-gradient(90deg, #fd80a8, #fcce42);
+   border: 0 solid transparent;
+   border-radius: 10px;
+   background-size: 500%;
+   animation: animate2 1.75s linear infinite;
+}
+
+@keyframes animate2 {
+   0% {
+      background-position: 0% 0%;
+   }
+   50% {
+      background-position: 100% 0%;
+   }
+   100% {
+      background-position: 0% 0%;
+   }
+}
+
+.members__title {
+   font-size: 2.5rem;
+   font-weight: 1000;
+   align-self: center;
+   text-align: center;
+   padding: 20px 0 0 0;
+   width: 100%;
+   color: #e74c3c;
+   background: linear-gradient(45deg, #e65758, #e3aad2, #33ff88, #292e91);
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   background-size: 500% 500%;
+   animation: animate 3s ease-out infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* HAPPY */
+.happy {
+   height: auto;
+   background-size: cover;
+   background-repeat: no-repeat;
+   width: 75%;
+   align-self: center;
+   position: relative;
+   width: 100%;
+}
+
+.happy__img {
+   width: 100%;
+}
+
+.happy__medium-text {
+   position: absolute;
+   left: 50%;
+   transform: translate(-50%, 50%);
+   font-size: 3rem;
+   color: #fff;
+   width: 100%;
+   text-align: center;
+}
+
+.happy__paragraph {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   color: #fff;
+   width: 100%;
+}
+
+.happy__paragraph--big-text {
+   color: #FA8072;
+   font-size: 4.3rem;
+   font-weight: 900;
+   text-shadow: 0 0 15px #ff0000;
+   animation: animate1 7s linear infinite;
+}
+
+@keyframes animate1 {
+   0% {
+      margin-left: 0;
+   }
+   25% {
+      margin-left: -150px;
+   }
+   50% {
+      margin-left: 0;
+   }
+   75% {
+      margin-left: 150px;
+   }
+   100% {
+      margin-left: 0;
+   }
+}
+
+/* WiSHES */
+.wishes {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.wishes__an-khang, .wishes__van-su {
+   align-self: center;
+   background: #ff0000;
+   width: 100px;
+   text-align: center;
+   line-height: 70px;
+   font-size: 2.5rem;
+   color: #ffff00;
+   box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5);
+   font-weight: 600;
+}
+
+.wishes__img {
+   width: 450px;
+   height: auto;
+}
+
+/* MEMBERS */
+.member {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 30px 0;
+}
+
+.member__parent {
+   background: linear-gradient(135deg, #e8aedd, #8d3a87);
+}
+
+.member__first-brother {
+   background: linear-gradient(135deg, #ccffaa, #1e5b53);
+}
+
+.member__first-sister-in-law {
+   background: linear-gradient(135deg, #ffddec, #ffa4ed);
+}
+
+.member__second-brother {
+   background: linear-gradient(135deg, #9fa5d5, #e8f5c8);
+}
+
+.member__third-brother {
+   background: linear-gradient(135deg, #fed0c5, #8b47b5);
+}
+
+.member__sister {
+   background: linear-gradient(135deg, #c2fdff, #6fc3f7);
+}
+
+.member__children {
+   background: linear-gradient(135deg, #ead6ee, #a0f1ea);
+}
+
+.member__paragraph {
+   text-align: left;
+   width: 70%;
+   display: flex;
+   flex-direction: column;
+}
+
+.member__img--may {
+   height: 500px;
+   width: auto;
+}
+
+/* VIDEO */
+.video {
+   background: linear-gradient(135deg, #fed0c5, #8b47b5);
+   padding: 30px 0;
+}
+
+.iframe {
+   box-shadow: 10px 10px 18px rgba(0, 0, 0, 0.4);
+}
+/* FOOTER */
+.footer {
+   width: calc(100% + 50px);
+   height: 100px;
+   background: #404040;
+   color: #fff;
+   display: flex;
+   flex-direction: column;
+   align-self: center;
+   justify-content: center;
+}
+
+@media only screen and (max-width: 46.1875em) {
+   body {
+      font-size: 1.3rem;
+   }
+   .happy__paragraph--big-text {
+      font-size: 1rem;
+   }
+} 
+</style>
 </head>
 
 <body>
-   <!-- HAPPY -->
+   <!-- HAPPY --> 
    <article class="happy">
       <p class="happy__medium-text">We are big family</p>
       <div class="happy__paragraph">
